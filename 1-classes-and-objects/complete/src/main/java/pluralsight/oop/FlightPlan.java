@@ -19,7 +19,7 @@ public class FlightPlan {
     FlightPlan(String departure, String destination) {
         this();
 
-        if(departure == null || destination == null){
+        if (departure == null || destination == null) {
             throw new IllegalArgumentException();
         }
 
@@ -46,14 +46,14 @@ public class FlightPlan {
         this.departureTime = departureTime;
     }
 
-    @Override
-    public String toString() {
-        return "{" +
+    public void print() {
+        String msg = "{" +
                 "id='" + this.id + '\'' +
                 "departure='" + this.departure + '\'' +
                 ", destination='" + this.destination + '\'' +
                 ", departureDateTime=" + this.departureTime +
                 ", route=" + this.route +
                 '}';
+        System.out.println(msg);
     }
 }

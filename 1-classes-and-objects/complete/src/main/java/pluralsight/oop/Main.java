@@ -10,7 +10,7 @@ public class Main {
                 "BER",
                 "OTP"
         );
-        System.out.println(berlinToBucharest);
+        berlinToBucharest.print();
 
         System.out.println();
 
@@ -21,6 +21,6 @@ public class Main {
                 LocalDateTime.of(2020, 01, 10, 23, 15),
                 List.of("CDG", "FARAR", "BAYKA", "DUDES", "LHR")
         );
-        System.out.println(parisToLondon);
+        parisToLondon.print();
     }
 }
