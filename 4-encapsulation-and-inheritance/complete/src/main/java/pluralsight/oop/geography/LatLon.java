@@ -1,6 +1,6 @@
 package pluralsight.oop.geography;
 
-class LatLon {
+public class LatLon {
     private double lat;
     private double lon;
 

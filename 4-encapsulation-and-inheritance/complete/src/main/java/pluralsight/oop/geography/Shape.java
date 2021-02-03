@@ -1,6 +1,6 @@
 package pluralsight.oop.geography;
 
-abstract class Shape {
+public abstract class Shape {
     public String toWkt() {
         String wkt = this.convertToWkt();
 
