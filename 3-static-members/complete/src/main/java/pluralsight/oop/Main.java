@@ -7,7 +7,7 @@ public class Main {
         int altitudeInFeet = 28000;
         double distInNm = 10;
 
-        int altitudeInFl = ConversionHelper.fromFeetToFL(300);
+        int altitudeInFl = ConversionHelper.fromFeetToFL(altitudeInFeet);
         System.out.println(altitudeInFeet + " ft -> FL" + altitudeInFl);
 
         double distInMeters = fromNmToMeters(10);

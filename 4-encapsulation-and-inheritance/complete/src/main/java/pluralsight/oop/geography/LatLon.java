@@ -25,7 +25,7 @@ public class LatLon {
     }
 
     private void setLon(double lon) {
-        if (lat < -180 || lat > 180) {
+        if (lon < -180 || lon > 180) {
             throw new IllegalArgumentException("Value not valid");
         }
         this.lon = lon;
