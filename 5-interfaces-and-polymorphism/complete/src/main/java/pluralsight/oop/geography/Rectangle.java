@@ -1,43 +1,29 @@
 package pluralsight.oop.geography;
 
+import java.util.List;
+
 public class Rectangle {
-    private Coordinate c1;
-    private Coordinate c2;
-    private Coordinate c3;
-    private Coordinate c4;
+    private List<Coordinate> coordinates;
 
-    /*
-    c1.....c2
-    .........
-    c3.....c4
-     */
     public Rectangle(Coordinate c1, Coordinate c2, Coordinate c3, Coordinate c4) {
-        if (c1.getX() != c3.getX() ||
-                c1.getY() != c2.getY() ||
-                c4.getX() != c2.getX() ||
-                c4.getY() != c3.getY()) {
-            throw new IllegalArgumentException("This is not a rectangle");
+        if(c1 == null || c2 == null || c3 == null || c4 == null){
+            throw new IllegalArgumentException("Can not build rectangle");
         }
-
-        this.c1 = c1;
-        this.c2 = c2;
-        this.c3 = c3;
-        this.c4 = c4;
+        this.coordinates = List.of(c1, c2, c3, c4);
     }
 
-    public Coordinate getC1() {
-        return c1;
-    }
+    public boolean containsCoordinate(Coordinate c) {
+        /*
+        Determine max and min values for coordinate
+        and check if point is between them
+         */
 
-    public Coordinate getC2() {
-        return c2;
-    }
+        int maxX = coordinates.stream().mapToInt(Coordinate::getX).max().getAsInt();
+        int minX = coordinates.stream().mapToInt(Coordinate::getX).min().getAsInt();
+        int maxY = coordinates.stream().mapToInt(Coordinate::getY).max().getAsInt();
+        int minY = coordinates.stream().mapToInt(Coordinate::getY).min().getAsInt();
 
-    public Coordinate getC3() {
-        return c3;
-    }
-
-    public Coordinate getC4() {
-        return c4;
+        return c.getX() >= minX && c.getX() <= maxX
+                && c.getY() >= minY && c.getY() <= maxY;
     }
 }

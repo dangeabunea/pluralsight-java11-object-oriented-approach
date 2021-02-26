@@ -8,14 +8,14 @@ En Route Sector
 A polygon sector used for en route flights that happen
 at cruise altitude
 
-We are using square for simplicity
+We are using rectangle for simplicity
  */
 public class EnRouteSector implements AirSector {
     private int lowerAltitudeFl;
     private int upperAltitudeFl;
     private Rectangle shape;
 
-    protected EnRouteSector(Rectangle shape, int lowerAltitudeFl, int upperAltitudeFl) {
+    public EnRouteSector(Rectangle shape, int lowerAltitudeFl, int upperAltitudeFl) {
         this.shape = shape;
         this.lowerAltitudeFl = lowerAltitudeFl;
         this.upperAltitudeFl = upperAltitudeFl;
@@ -26,9 +26,10 @@ public class EnRouteSector implements AirSector {
         if (altitude > this.upperAltitudeFl) {
             return false;
         }
-        if(altitude < this.lowerAltitudeFl){
+        if (altitude < this.lowerAltitudeFl) {
             return false;
         }
-        return true;
+
+        return shape.containsCoordinate(x);
     }
 }
