@@ -2,6 +2,7 @@ package pluralsight.oop.radar;
 
 import pluralsight.oop.geography.Coordinate;
 
+// Basic aircraft implementation
 public class Aircraft {
     private String callSign;
     private Coordinate coordinate;
