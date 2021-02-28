@@ -1,4 +1,4 @@
-package aircraft;
+package pluralsight.oop.aircraft;
 
 import java.util.Map;
 
@@ -7,10 +7,10 @@ public class TakeOffDistancingRules {
 
     public TakeOffDistancingRules() {
         rules = Map.of(
-                WakeTurbulence.Light, 60,
-                WakeTurbulence.Medium, 90,
-                WakeTurbulence.Heavy, 110,
-                WakeTurbulence.Super, 180
+                WakeTurbulence.LIGHT, 60,
+                WakeTurbulence.MEDIUM, 90,
+                WakeTurbulence.HEAVY, 110,
+                WakeTurbulence.SUPER, 180
         );
     }
 

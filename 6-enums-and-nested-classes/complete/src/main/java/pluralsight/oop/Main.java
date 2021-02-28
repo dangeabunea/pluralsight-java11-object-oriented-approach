@@ -1,9 +1,8 @@
 package pluralsight.oop;
 
 
-import aircraft.Aircraft;
-import aircraft.TakeOffDistancingRules;
-import aircraft.WakeTurbulence;
+import pluralsight.oop.aircraft.Aircraft;
+import pluralsight.oop.aircraft.WakeTurbulence;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -11,11 +10,11 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Aircraft> aircraft = List.of(
-                new Aircraft(1000, "B737", WakeTurbulence.Light),
-                new Aircraft(1001, "A320", WakeTurbulence.Light),
-                new Aircraft(1002, "A330", WakeTurbulence.Medium),
-                new Aircraft(1003, "ATR90", WakeTurbulence.Light),
-                new Aircraft(1004, "A380", WakeTurbulence.Super)
+                new Aircraft(1000, "B737", WakeTurbulence.LIGHT),
+                new Aircraft(1001, "A320", WakeTurbulence.LIGHT),
+                new Aircraft(1002, "A330", WakeTurbulence.MEDIUM),
+                new Aircraft(1003, "ATR90", WakeTurbulence.LIGHT),
+                new Aircraft(1004, "A380", WakeTurbulence.SUPER)
         );
 
         int offset = 0;

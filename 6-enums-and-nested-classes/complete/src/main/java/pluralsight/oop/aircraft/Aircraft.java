@@ -1,4 +1,4 @@
-package aircraft;
+package pluralsight.oop.aircraft;
 
 public class Aircraft {
     private final String model;

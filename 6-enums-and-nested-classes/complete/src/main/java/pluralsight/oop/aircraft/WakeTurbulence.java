@@ -1,10 +1,10 @@
-package aircraft;
+package pluralsight.oop.aircraft;
 
 public enum WakeTurbulence {
-    Light(60),
-    Medium(90),
-    Heavy(110),
-    Super(180);
+    LIGHT(60),
+    MEDIUM(90),
+    HEAVY(110),
+    SUPER(180);
 
     private int timeOffset;
 
