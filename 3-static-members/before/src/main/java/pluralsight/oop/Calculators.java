@@ -18,3 +18,4 @@ public class  Calculators {
     }
 
 }
+//Maybe later we may add other calculate like the fuel consumtion we use the Calculator class as staticgit
